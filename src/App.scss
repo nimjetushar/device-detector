@@ -1,0 +1,84 @@
+.title-styles {
+  font-weight   : bold;
+  font-size     : 18px;
+  text-transform: uppercase;
+  margin        : 20px 0 10px 0;
+  color         : #302a38;
+}
+
+.app {
+  padding: 0 10%;
+
+  &-title {
+    border-bottom : 1px solid #eee;
+    padding-bottom: 20px;
+  }
+
+  &-user-agent-container {
+    &-title {
+      text-transform: uppercase;
+
+      &-ua {
+        @extend .title-styles;
+      }
+
+      &-random-btn {
+        border            : none;
+        background        : transparent;
+        font-size         : 16px;
+        color             : rgba(48, 42, 56, 0.8);
+        outline           : none;
+        cursor            : pointer;
+        -webkit-transition: color 0.15s;
+        transition        : color 0.15s;
+        float             : right;
+
+        &-icon {
+          border       : none;
+          border-radius: 5px;
+          width        : 24px;
+          height       : 24px;
+          font-size    : 24px;
+          line-height  : 19px;
+          margin-right : 5px;
+        }
+
+        &-title {
+          line-height   : 24px;
+          vertical-align: top;
+        }
+      }
+    }
+
+    &-ua-textarea {
+      margin-bottom: 30px;
+
+      textarea {
+        background   : #f1eff3;
+        display      : block;
+        box-shadow   : inset rgba(0, 0, 0, 0.15) 0 2px 5px;
+        width        : 100%;
+        border       : none;
+        padding      : 20px 30px;
+        font-family  : monospace;
+        font-size    : 16px;
+        border-radius: 5px;
+        outline      : none;
+        color        : rgba(48, 42, 56, 0.8);
+        resize       : none;
+        height       : 77px;
+      }
+    }
+
+    &-result {
+      &-title {
+        @extend .title-styles;
+      }
+
+      .react-json-view {
+        border-radius: 4px;
+        padding      : 20px;
+      }
+    }
+  }
+}
