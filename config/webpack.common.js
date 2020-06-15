@@ -18,7 +18,14 @@ module.exports = mode => {
 
     module: {
       rules: [{
-        exclude: /node_modules/,
+        exclude: (absPath) => {
+          if (absPath.indexOf('tutility') > -1) {
+            return false;
+          } else if (absPath.indexOf('node_modules') > -1) {
+            return true;
+          }
+          return false;
+        },
         test: /\.(js|jsx)$/,
         use: {
           loader: 'babel-loader'
@@ -86,7 +93,8 @@ module.exports = mode => {
     ],
 
     resolve: {
-      extensions: ['.js', '.jsx']
+      extensions: ['.js', '.jsx'],
+      modules: ['node_modules']
     }
   };
 };

@@ -82,3 +82,41 @@
     }
   }
 }
+
+
+@media only screen and (max-width: 600px) {
+  .mobile-title-styles {
+    font-weight: 500;
+    padding    : 0 10px;
+  }
+
+  .app {
+    padding: 0;
+
+    &-title {
+      font-size: 1.6em;
+      @extend .mobile-title-styles;
+    }
+
+    &-user-agent-container {
+
+      &-title {
+        &-ua {
+          @extend .mobile-title-styles;
+        }
+      }
+
+      &-ua-textarea {
+        textarea {
+          padding: 10px 10px;
+        }
+      }
+
+      &-result {
+        &-title {
+          @extend .mobile-title-styles;
+        }
+      }
+    }
+  }
+}
