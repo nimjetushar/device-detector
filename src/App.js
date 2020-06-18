@@ -1,7 +1,7 @@
 import './App.scss';
 import React, { Component } from 'react';
 import ReactJson from 'react-json-view';
-import Detect from 'tutility/detect';
+import Detect from 'tutility/build/detect';
 import { bots } from './userAgents/bot';
 import { consoles } from './userAgents/console';
 import { desktops } from './userAgents/desktop';

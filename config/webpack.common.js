@@ -1,4 +1,6 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin'),
+/* eslint-disable sort-keys */
+const path = require('path'),
+  HtmlWebpackPlugin = require('html-webpack-plugin'),
   MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 function fileLoaderOpt(type) {
@@ -12,23 +14,17 @@ function fileLoaderOpt(type) {
 module.exports = mode => {
   return {
     entry: {
-      app: './src/index.js',
-      polyfills: './src/polyfills.js'
+      polyfills: './src/polyfills',
+      app: './src/index'
     },
 
     module: {
       rules: [{
-        exclude: (absPath) => {
-          if (absPath.indexOf('tutility') > -1) {
-            return false;
-          } else if (absPath.indexOf('node_modules') > -1) {
-            return true;
-          }
-          return false;
-        },
         test: /\.(js|jsx)$/,
-        use: {
-          loader: 'babel-loader'
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        options: {
+          configFile: path.resolve('babel.config.js')
         }
       },
       {

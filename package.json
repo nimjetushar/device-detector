@@ -3,16 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@babel/polyfill": "7.10.1",
+    "core-js": "3.6.5",
     "device-detector-js": "2.2.1",
     "grid-styled-css": "1.0.2",
     "react": "16.13.1",
     "react-dom": "16.13.0",
     "react-json-view": "1.19.1",
-    "tutility": "3.0.0"
+    "regenerator-runtime": "0.13.5",
+    "tutility": "3.1.0"
   },
   "devDependencies": {
     "@babel/core": "7.10.2",
+    "@babel/plugin-syntax-dynamic-import": "7.8.3",
+    "@babel/plugin-transform-object-assign": "7.10.1",
     "@babel/preset-env": "7.10.2",
     "@babel/preset-react": "7.10.1",
     "@fourjs/eslint-config-tn": "4.2.1",
